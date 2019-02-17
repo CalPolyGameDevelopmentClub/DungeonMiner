@@ -35,8 +35,8 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-#my test scene
-Assets/Scenes/mitch*
-Assets/Scenes/megan*
-Assets/Scenes/joe*
-Assets/Scenes/evan*
+#Our Test scene files
+Assets/_Scenes/[Mm]itch*
+Assets/_Scenes/[Mm]megan*
+Assets/_Scenes/[Jj]oe*
+Assets/_Scenes/[Ee]van*
