@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CharacterClass", menuName = "CharacterClass", order = 1)]
+[CreateAssetMenu(fileName = "CharacterClass", menuName = "CharacterClass")]
 public class CharacterClass : ScriptableObject
-{
-    public int health;
-    public int power;
-    public int speed;
+{ 
+    [Range(0, 5)] public int health;
+    [Range(0, 5)] public int power;
+    [Range(0, 5)] public int speed;
 }

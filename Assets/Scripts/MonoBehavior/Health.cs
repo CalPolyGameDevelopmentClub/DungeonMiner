@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private Loadout lo;
+
     public int current;
     public bool isDead = false;
 
-    private Loadout lo;
-
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         lo = GetComponent<Loadout>();
-    }
+    }*/
 
     // Update is called once per frame
     void Update()

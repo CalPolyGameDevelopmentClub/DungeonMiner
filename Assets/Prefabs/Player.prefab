@@ -167,6 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfaf8ccf60ae305d862b950eafcbe31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 6093034191884872967}
+  vc: {fileID: 6093034191884872970}
+  lo: {fileID: 2980543526562914154}
   baseSpeed: 1
 --- !u!114 &8044651616879649166
 MonoBehaviour:
@@ -180,5 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bf5f20ba56f0f308b2e37a46b8ffc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lo: {fileID: 2980543526562914154}
   current: 3
   isDead: 0
