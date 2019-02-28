@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.unity.2d.pixel-perfect": "1.0.1-preview",
+    "com.unity.2d.tilemap.extras": "https://github.com/Unity-Technologies/2d-extras.git#package",
     "com.unity.analytics": "3.2.2",
     "com.unity.cinemachine": "2.2.8",
     "com.unity.package-manager-ui": "2.0.3",
@@ -35,5 +36,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.unity.2d.tilemap.extras": {
+      "hash": "254da3b845a0b39b27b0d8402ea638c965b53c2b",
+      "revision": "package"
+    }
   }
 }
