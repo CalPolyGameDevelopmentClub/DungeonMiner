@@ -14,7 +14,12 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 movementDirection;
     private Vector2 facingDirection;
+    private float primary;
+    private float secondary;
+    private float evade;
     private VirtualController vc;
+
+    //Needs and input buffer
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         Facing();
+        Activations();
         Send();
     }
 
@@ -46,9 +52,19 @@ public class PlayerController : MonoBehaviour
         ).normalized;
     }
 
+    private void Activations()
+    {
+        primary = Input.GetAxisRaw(primaryAxis);
+        secondary = Input.GetAxisRaw(secondaryAxis);
+        evade = Input.GetAxisRaw(dodgeAxis);
+    }
+
     private void Send()
     {
         vc.movementDirection = movementDirection;
         vc.facingDirection = facingDirection;
+        vc.primary = primary;
+        vc.secondary = secondary;
+        vc.evade = evade; 
     }
 }

@@ -10,6 +10,9 @@ public class Evasion : MonoBehaviour
 
     public EvadeAbility evadeAbility;
 
+    private float evadeTimeLeft = 0.0f;
+    private float iTimeLeft = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,37 @@ public class Evasion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckInput();
+        Cooldowns();
+        Invincibility();
+    }
+
+    private void CheckInput()
+    {
+        if (vc.evade > 0.0f && evadeTimeLeft == 0.0f) {
+            Trigger(evadeAbility);
+            evadeTimeLeft = evadeAbility.baseCooldown;
+        }
+    }
+
+    private void Trigger(EvadeAbility ability)
+    {
+        //Do stuff here
+    }
+
+    private void Cooldowns()
+    {
+        if (evadeTimeLeft > 0.0f) {
+            evadeTimeLeft = Mathf.Clamp(
+                evadeTimeLeft - Time.deltaTime, 
+                0.0f, 
+                evadeAbility.baseCooldown
+            );
+        }
+    }
+
+    private void Invincibility()
+    {
+
     }
 }
