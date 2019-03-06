@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "EmitAbility", menuName = "Ability/EmitAbility")]
 public class EmitAbility : Ability
 {
     public float offset;

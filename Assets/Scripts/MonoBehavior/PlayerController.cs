@@ -19,8 +19,6 @@ public class PlayerController : MonoBehaviour
     private float evade;
     private VirtualController vc;
 
-    //Needs and input buffer
-
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +61,8 @@ public class PlayerController : MonoBehaviour
     {
         vc.movementDirection = movementDirection;
         vc.facingDirection = facingDirection;
+        
+        //Should be pushing to input buffer
         vc.primary = primary;
         vc.secondary = secondary;
         vc.evade = evade; 

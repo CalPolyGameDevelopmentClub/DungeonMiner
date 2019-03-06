@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "EvadeAbility", menuName = "Ability/EvadeAbility")]
 public class EvadeAbility : Ability
 {
     public float iTime;

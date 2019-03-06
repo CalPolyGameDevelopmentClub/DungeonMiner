@@ -157,6 +157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementDirection: {x: 0, y: 0}
   facingDirection: {x: 0, y: 0}
+  primary: 0
+  secondary: 0
+  evade: 0
 --- !u!114 &6093034191884872961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,8 +205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vc: {fileID: 6093034191884872970}
   lo: {fileID: 2980543526562914154}
-  primaryAbility: {fileID: 0}
-  secondaryAbility: {fileID: 0}
+  primaryAbility: {fileID: 11400000, guid: f239a130a384c5e2987fcefaa2999eb7, type: 2}
+  secondaryAbility: {fileID: 11400000, guid: f239a130a384c5e2987fcefaa2999eb7, type: 2}
 --- !u!114 &2419671226622740216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,4 +221,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vc: {fileID: 6093034191884872970}
   lo: {fileID: 2980543526562914154}
-  evadeAbility: {fileID: 0}
+  evadeAbility: {fileID: 11400000, guid: db786ce0f2036fb179a113c3649bfa33, type: 2}
