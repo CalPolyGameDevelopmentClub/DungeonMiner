@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: EvadeBasic
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  baseCooldown: 0
-  iTime: 0
-  rollDistance: 0
+  baseCooldown: 0.5
+  iTime: 0.25
+  rollDistance: 3
+  evadeTime: 0.125

@@ -7,12 +7,19 @@ public class Evasion : MonoBehaviour
 {
     [SerializeField] private VirtualController vc;
     [SerializeField] private Movement m;
+    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Loadout lo;
 
-    public EvadeAbility evadeAbility;
+    public EvadeAbility ea;
 
+    private float abilityTimeLeft = 0.0f;
     private float evadeTimeLeft = 0.0f;
     private float iTimeLeft = 0.0f;
+
+    [SerializeField] private bool invincible = false;
+
+    //not necessary
+    private Color old;
 
     // Start is called before the first frame update
     void Start()
@@ -25,35 +32,69 @@ public class Evasion : MonoBehaviour
     {
         CheckInput();
         Cooldowns();
-        Invincibility();
     }
 
     private void CheckInput()
     {
-        if (vc.evade > 0.0f && evadeTimeLeft == 0.0f) {
-            Trigger(evadeAbility);
-            evadeTimeLeft = evadeAbility.baseCooldown;
+        if (vc.evade > 0.0f && abilityTimeLeft == 0.0f) {
+            Trigger(ea);
         }
     }
 
-    private void Trigger(EvadeAbility ability)
+    private void Trigger(EvadeAbility a)
     {
         //Do stuff here
+        abilityTimeLeft = a.baseCooldown;
+        evadeTimeLeft = a.evadeTime;
+        m.canMove = false;
+        rb.velocity = vc.movementDirection * (a.rollDistance / a.evadeTime);
+        iTimeLeft = a.iTime;
+        InvincibilityOn();
     }
 
     private void Cooldowns()
     {
+        //activation
+        if (abilityTimeLeft > 0.0f) {
+            abilityTimeLeft = Mathf.Clamp(
+                abilityTimeLeft - Time.deltaTime, 
+                0.0f, 
+                ea.baseCooldown
+            );
+        }
+
+        //actually evading
         if (evadeTimeLeft > 0.0f) {
             evadeTimeLeft = Mathf.Clamp(
-                evadeTimeLeft - Time.deltaTime, 
-                0.0f, 
-                evadeAbility.baseCooldown
+                evadeTimeLeft - Time.deltaTime,
+                0.0f,
+                ea.evadeTime
             );
+        }
+        else {
+            m.canMove = true;
+        }
+
+        //invincibility
+        if (iTimeLeft >0.0f) {
+            iTimeLeft = Mathf.Clamp(
+                iTimeLeft - Time.deltaTime,
+                0.0f,
+                ea.iTime
+            );
+        }
+        else {
+            InvincibilityOff();
         }
     }
 
-    private void Invincibility()
+    private void InvincibilityOn()
     {
+        invincible = true;
+    }
 
+    private void InvincibilityOff()
+    {
+        invincible = false;
     }
 }

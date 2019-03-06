@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6093034191884872964}
   - component: {fileID: 6093034191884872967}
+  - component: {fileID: 6226940790254926377}
   - component: {fileID: 6093034191884872966}
   - component: {fileID: 6093034191884872965}
   - component: {fileID: 2980543526562914154}
@@ -47,7 +48,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6093034191884872960}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -58,8 +59,24 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!58 &6226940790254926377
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093034191884872960}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!212 &6093034191884872966
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97,7 +114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1659d121e355ce34ca1e3a801875fa58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 803a6645e8bc45372a5ad72b9df2e4c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -176,6 +193,7 @@ MonoBehaviour:
   vc: {fileID: 6093034191884872970}
   lo: {fileID: 2980543526562914154}
   baseSpeed: 1
+  canMove: 1
 --- !u!114 &8044651616879649166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,5 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vc: {fileID: 6093034191884872970}
+  m: {fileID: 6093034191884872961}
+  rb: {fileID: 6093034191884872967}
   lo: {fileID: 2980543526562914154}
-  evadeAbility: {fileID: 11400000, guid: db786ce0f2036fb179a113c3649bfa33, type: 2}
+  ea: {fileID: 11400000, guid: db786ce0f2036fb179a113c3649bfa33, type: 2}
+  invincible: 0

@@ -7,4 +7,5 @@ public class EvadeAbility : Ability
 {
     public float iTime;
     public float rollDistance;
+    public float evadeTime;
 }

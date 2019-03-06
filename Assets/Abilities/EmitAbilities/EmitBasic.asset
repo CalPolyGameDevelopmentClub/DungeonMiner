@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EmitBasic
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  baseCooldown: 0
-  offset: 0
-  prefab: {fileID: 0}
+  baseCooldown: 1
+  offset: 1
+  prefab: {fileID: 1292559196294598031, guid: de53b67c974ba17f58c47ae0bb07e8ee, type: 3}

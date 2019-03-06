@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
 
     public float baseSpeed;
 
-    private bool canMove = true;
+    [HideInInspector] public bool canMove = true;
 
     // Update is called once per frame
     void Update()
