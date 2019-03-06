@@ -12,14 +12,6 @@ public class Movement : MonoBehaviour
 
     private bool canMove = true;
 
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        vc = GetComponent<VirtualController>();
-        lo = GetComponent<Loadout>();
-    }*/
-
     // Update is called once per frame
     void Update()
     {

@@ -44,10 +44,18 @@ public class PlayerController : MonoBehaviour
 
     private void Facing()
     {
-        facingDirection = new Vector2(
+        /*facingDirection = new Vector2(
             Input.GetAxisRaw(facingHorizontalAxis),
             Input.GetAxisRaw(facingVerticalAxis)
-        ).normalized;
+        ).normalized;*/
+
+        Vector3 mp = Input.mousePosition;
+        Vector3 mpWorld = Camera.main.ScreenToWorldPoint(mp);
+
+        facingDirection = new Vector2(
+            mpWorld.x - transform.position.x,
+            mpWorld.y - transform.position.y
+        ).normalized; 
     }
 
     private void Activations()

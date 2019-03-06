@@ -6,6 +6,7 @@ using UnityEngine;
 public class Evasion : MonoBehaviour
 {
     [SerializeField] private VirtualController vc;
+    [SerializeField] private Movement m;
     [SerializeField] private Loadout lo;
 
     public EvadeAbility evadeAbility;
