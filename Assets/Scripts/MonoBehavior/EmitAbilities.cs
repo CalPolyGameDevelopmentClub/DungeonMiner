@@ -53,7 +53,7 @@ public class EmitAbilities : MonoBehaviour
             ao.transform.position.x - transform.position.x, 
             ao.transform.position.y - transform.position.y
         ).normalized;
-        if (ao.isMeleee) ao.transform.SetParent(gameObject.transform);
+        //if (ao.isMeleee) ao.transform.SetParent(gameObject.transform);
     }
 
     private void Cooldowns() 
