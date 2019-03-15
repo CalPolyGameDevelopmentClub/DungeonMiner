@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6936902986108844937}
   - component: {fileID: 2990828584537165770}
+  - component: {fileID: 3186681781406965696}
   m_Layer: 0
   m_Name: Test Bullet
   m_TagString: Untagged
@@ -68,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1659d121e355ce34ca1e3a801875fa58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 803a6645e8bc45372a5ad72b9df2e4c4, type: 3}
   m_Color: {r: 0.46953392, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,3 +80,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3186681781406965696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292559196294598031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0743f89b62c7429a9e52c280926c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  lifespan: 0
+  power: 0

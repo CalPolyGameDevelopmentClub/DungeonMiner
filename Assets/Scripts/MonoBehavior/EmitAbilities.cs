@@ -16,7 +16,8 @@ public class EmitAbilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        primaryAbility = lo.primary;
+        secondaryAbility = lo.secondary;
     }
 
     // Update is called once per frame
@@ -41,11 +42,17 @@ public class EmitAbilities : MonoBehaviour
     private void Trigger(EmitAbility ability)
     {
         Vector2 offset = vc.facingDirection * ability.offset;
-        Instantiate(
-            ability.prefab,
+        Projectile projectile = Instantiate(
+            ability.prefab.gameObject,
             transform.position + new Vector3(offset.x, offset.y, 0.0f),
             Quaternion.identity
-        );
+        ).GetComponent<Projectile>();
+        projectile.speed = ability.speed;
+        projectile.lifespan = ability.lifespan;
+        projectile.direction = new Vector2(
+            projectile.transform.position.x - transform.position.x, 
+            projectile.transform.position.y - transform.position.y
+        ).normalized;
     }
 
     private void Cooldowns() 

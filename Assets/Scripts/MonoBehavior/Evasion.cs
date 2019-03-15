@@ -18,13 +18,10 @@ public class Evasion : MonoBehaviour
 
     [SerializeField] private bool invincible = false;
 
-    //not necessary
-    private Color old;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        ea = lo.evade;   
     }
 
     // Update is called once per frame

@@ -15,3 +15,6 @@ MonoBehaviour:
   health: 3
   power: 4
   speed: 4
+  primary: {fileID: 11400000, guid: f239a130a384c5e2987fcefaa2999eb7, type: 2}
+  secondary: {fileID: 11400000, guid: f239a130a384c5e2987fcefaa2999eb7, type: 2}
+  evade: {fileID: 11400000, guid: db786ce0f2036fb179a113c3649bfa33, type: 2}
