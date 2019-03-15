@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6936902986108844937}
+  - component: {fileID: 5469218936366740019}
   - component: {fileID: 2990828584537165770}
   - component: {fileID: 3186681781406965696}
   m_Layer: 0
-  m_Name: Test Bullet
+  m_Name: EmitBasic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,6 +33,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &5469218936366740019
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292559196294598031}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!212 &2990828584537165770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -89,9 +111,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292559196294598031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0743f89b62c7429a9e52c280926c66, type: 3}
+  m_Script: {fileID: 11500000, guid: b269f269881a4d6b2a7e6be1d81e6d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
   lifespan: 0
   power: 0
+  direction: {x: 0, y: 0}

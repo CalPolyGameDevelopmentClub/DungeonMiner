@@ -8,5 +8,5 @@ public class EmitAbility : Ability
     public float offset;
     public float speed;
     public float lifespan;
-    public Projectile prefab;
+    public AbilityObject prefab;
 }

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class AbilityObject : MonoBehaviour
 {
     [HideInInspector] public float speed;
     [HideInInspector] public float lifespan;
     [HideInInspector] public float power;
     [HideInInspector] public Vector2 direction;
+    public bool isMeleee;
 
     private float timeAlive = 0.0f;
 

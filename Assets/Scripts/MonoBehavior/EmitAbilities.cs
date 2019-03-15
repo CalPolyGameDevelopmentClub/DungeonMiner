@@ -42,17 +42,18 @@ public class EmitAbilities : MonoBehaviour
     private void Trigger(EmitAbility ability)
     {
         Vector2 offset = vc.facingDirection * ability.offset;
-        Projectile projectile = Instantiate(
+        AbilityObject ao = Instantiate(
             ability.prefab.gameObject,
             transform.position + new Vector3(offset.x, offset.y, 0.0f),
             Quaternion.identity
-        ).GetComponent<Projectile>();
-        projectile.speed = ability.speed;
-        projectile.lifespan = ability.lifespan;
-        projectile.direction = new Vector2(
-            projectile.transform.position.x - transform.position.x, 
-            projectile.transform.position.y - transform.position.y
+        ).GetComponent<AbilityObject>();
+        ao.speed = ability.speed;
+        ao.lifespan = ability.lifespan;
+        ao.direction = new Vector2(
+            ao.transform.position.x - transform.position.x, 
+            ao.transform.position.y - transform.position.y
         ).normalized;
+        if (ao.isMeleee) ao.transform.SetParent(gameObject.transform);
     }
 
     private void Cooldowns() 

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d715bc4fb695490a58f0288a8502c5be, type: 3}
-  m_Name: EmitBasic
+  m_Name: EmitBasicRanged
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  baseCooldown: 1
+  baseCooldown: 0.5
   offset: 1
-  speed: 0
-  lifespan: 0.5
-  prefab: {fileID: 3186681781406965696, guid: de53b67c974ba17f58c47ae0bb07e8ee, type: 3}
+  speed: 2
+  lifespan: 1
+  prefab: {fileID: 7363936133802425456, guid: ce965b4cc728f61f78ea41bf73765023, type: 3}
